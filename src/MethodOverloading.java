@@ -8,6 +8,12 @@ public class MethodOverloading {
         System.out.println("Default Constructor!");
     }
     MethodOverloading(int i){
-        System.out.println("Parameterized Con");
+        System.out.println("Parameterized Constructor");
+        System.out.println(i);
+    }
+
+    public static void main(String[] args) {
+        MethodOverloading obj=new MethodOverloading();
+        MethodOverloading obj1=new MethodOverloading(1);
     }
 }
