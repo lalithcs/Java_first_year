@@ -9,7 +9,9 @@ class threadA implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Running....");
+        synchronized (this) {
+            System.out.println("Running....");
+        }
     }
 }
 
