@@ -1,5 +1,5 @@
 public class EvenOddUsingThreads {
-    private static class Printer {
+    public static class Printer {
         private volatile boolean isEvenPrinted = false;
 
         public synchronized void printEven(int number) {
