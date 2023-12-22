@@ -1,0 +1,101 @@
+In Java, inheritance is a mechanism where a new class (derived or child class) is created from an existing class (base or parent class). There are various types of inheritance supported in Java:
+
+1. **Single Inheritance:**
+   Single inheritance is where a class inherits only a single class. The most straightforward form of inheritance.
+
+   Example:
+   ```java
+   class Animal {
+       void eat() {
+           System.out.println("Animal is eating...");
+       }
+   }
+
+   class Dog extends Animal {
+       void bark() {
+           System.out.println("Dog is barking...");
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Dog myDog = new Dog();
+           myDog.eat(); // Inherited method
+           myDog.bark(); // Method from Dog class
+       }
+   }
+   ```
+   In this example, `Dog` inherits from `Animal`. `Dog` class can access the `eat()` method from the `Animal` class.
+
+2. **Multilevel Inheritance:**
+   Multilevel inheritance involves a chain of inheritance where a derived class becomes a base class for another class.
+
+   Example:
+   ```java
+   class Animal {
+       void eat() {
+           System.out.println("Animal is eating...");
+       }
+   }
+
+   class Dog extends Animal {
+       void bark() {
+           System.out.println("Dog is barking...");
+       }
+   }
+
+   class Labrador extends Dog {
+       void color() {
+           System.out.println("Labrador is golden in color.");
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Labrador myLabrador = new Labrador();
+           myLabrador.eat(); // Inherited method from Animal
+           myLabrador.bark(); // Inherited method from Dog
+           myLabrador.color(); // Method from Labrador
+       }
+   }
+   ```
+   Here, `Labrador` inherits from `Dog`, which in turn inherits from `Animal`. `Labrador` class can access methods from both `Dog` and `Animal` classes.
+
+3. **Hierarchical Inheritance:**
+   Hierarchical inheritance involves multiple classes inheriting from a single class.
+
+   Example:
+   ```java
+   class Animal {
+       void eat() {
+           System.out.println("Animal is eating...");
+       }
+   }
+
+   class Dog extends Animal {
+       void bark() {
+           System.out.println("Dog is barking...");
+       }
+   }
+
+   class Cat extends Animal {
+       void meow() {
+           System.out.println("Cat is meowing...");
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Dog myDog = new Dog();
+           myDog.eat(); // Inherited method from Animal
+           myDog.bark(); // Method from Dog
+
+           Cat myCat = new Cat();
+           myCat.eat(); // Inherited method from Animal
+           myCat.meow(); // Method from Cat
+       }
+   }
+   ```
+   In this example, both `Dog` and `Cat` inherit from the `Animal` class, allowing them to access methods from `Animal` and their own specific methods.
+
+These examples illustrate different types of inheritance in Java and how classes can inherit behavior and properties from their parent classes, forming a hierarchy of relationships.
