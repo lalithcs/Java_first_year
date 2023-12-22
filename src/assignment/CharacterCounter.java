@@ -19,7 +19,7 @@ High Performance: With JIT (Just-In-Time) compilation, Java offers high performa
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
+//********problem 2*******
 public class CharacterCounter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
